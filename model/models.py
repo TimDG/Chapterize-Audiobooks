@@ -83,6 +83,7 @@ model_languages = {
 # Signal phrases for chapter markers
 _markers_english = ('prologue', 'chapter', 'epilogue')
 _markers_german = ('prolog', 'kapitel', 'epilog')
+_markers_dutch = ('proloog', 'hoofdstuk', 'epiloog', 'voorwoord', 'nawoord')
 
 # Some false positive phrases/words that trigger a chapter marker...will need building over time
 _excluded_phrases_english = (
@@ -101,6 +102,10 @@ _excluded_phrases_german = (
     'das schlusskapitel', 'die kapitelüberschrift', 'ein kapitel'
 )
 
+_excluded_phrases_dutch = (
+    'nieuw hoofdstuk', 'een hoofdstuk', 'dit hoofdstuk', 'dat hoofdstuk',
+    'vergeten hoofdstuk', 'het hoofdstuk'
+)
 
 
 def get_lang_from_code(lang: str) -> str:
